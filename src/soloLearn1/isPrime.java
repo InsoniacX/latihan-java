@@ -3,27 +3,27 @@ package soloLearn1;
 import java.util.Scanner;
 
 public class isPrime {
-	static String isPrime(int number) 
-    {
-        String result = "";
+    static String sIsPrime(int number) {
+        String sResult = "";
         for (int i = 2; i <= number / 2; ++i) {
-            /* condition for non prime number,
-               don't change condition*/
-            if (number % i == 0){
-                result = "Isn't prime";
+            /*
+             * condition for non prime number,
+             * don't change condition
+             */
+            if (number % i == 0) {
+                sResult = "Isn't prime";
+            } else {
+                sResult  = "Is prime";
             }
-            else{
-                result = "Is prime";
-            }   
         }
-        //return the result
-        return  result;
+        // return the result
+        return sResult;
     }
 
     public static void main(String[] args) {
-        Scanner read = new Scanner(System.in);
-        int number = read.nextInt();
-        String output = isPrime(number);
-        System.out.println(output);
-    }    
+        Scanner scRead = new Scanner(System.in);
+        int number = scRead.nextInt();
+        String sOutput = sIsPrime(number);
+        System.out.println(sOutput);
+    }
 }
